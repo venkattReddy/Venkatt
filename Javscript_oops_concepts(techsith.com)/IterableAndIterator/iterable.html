@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red">Iterable And Iterator(array in javascript are consider as iterable)</h2>
+</body>
+<script>
+    "use strict";
+    let myArray=[4,5,1,2,6,];
+    let len = myArray.length;
+    for(let i=0; i <= len; i++){
+ console.log("Value is:"+myArray[i]);
+    }
+    console.dir(myArray); //using this we can find object is iterator are nor check in __proto__ it gives symbole(symbol.iterator)
+
+    var myObject = {    //this is not iterable
+        "name":"Venaktt",
+        "age":25,
+        "friend":["Jhon","Charles","Mike"],
+        "GetName":function(){
+          return this.name;
+        }
+
+                };
+
+    //check ablve object is iterable or not
+    console.dir(myObject);
+</script>
+</html>

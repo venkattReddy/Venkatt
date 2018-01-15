@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Parse method</h2>
+</body>
+<script>
+    var text = '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+    Object=JSON.parse(text);
+    document.write("Result is:"+Object.employees[0].firstName+" "+Object.employees[0].lastName);
+</script>
+</html>

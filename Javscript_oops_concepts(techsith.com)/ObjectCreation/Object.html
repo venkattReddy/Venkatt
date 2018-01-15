@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Create Object</h2>
+</body>
+<script>
+    //one type od object creation
+
+    var myObject = new Object();
+    console.log(myObject);
+
+    //create object another way this is efficient method to crete object
+    var Object = {};
+    console.log(Object);
+
+    var ObjectCreate = { "string":"Venkatt",
+                         "name":"jhon",
+                          "number":5,
+                           "boolean":true,
+                          "myMethod":function(){
+                          return this.string;
+                          }
+
+                        };
+
+    console.log(ObjectCreate.string);
+    console.log(ObjectCreate.number);
+    console.log(ObjectCreate.boolean);
+    console.log(ObjectCreate.myMethod());
+
+    //add property to object
+    ObjectCreate.price ="100$";
+    console.log(ObjectCreate);
+
+    //delete property from object
+    delete(ObjectCreate.name);
+    console.log(ObjectCreate);
+     //function struct display
+    var myFunction =function(){
+
+    };
+    console.dir(myFunction);
+    //function constructor
+    var employe = function(){
+          this.name = "Kalyan";
+          this.age = 25;
+          this.city = "Hyd";
+    };
+  var emp1 = new employe();
+    console.log(emp1.name);
+
+</script>
+</html>

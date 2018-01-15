@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 style="color:red;">ID Selector</h2>
+<button>Click</button>
+<p>This is Normal element</p>
+<p id="myId">This is Id element</p>
+</body>
+<script>
+ $(document).ready(function(){
+   $("button").click(function(){
+       $("#myId").hide();
+   });
+ });
+</script>
+</html>

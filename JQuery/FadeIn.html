@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .myCalss{
+            width:100px;
+            height:80px;
+            background: green;
+            border:2px solid blue;
+            display: none;
+        }
+        #div2{
+            background:red;
+        }
+        #div3{
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Fade In</h2>
+<button>FadeIn</button>
+<div id="div1" class="myCalss">Div1</div>
+<div id="div2" class="myCalss">Div2</div>
+<div id="div3" class="myCalss">Div3</div>
+</body>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+    $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(2000);
+    });
+});
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Prototypes Pattern</h2>
+</body>
+<script>
+    var personProtoType= function(){
+
+    };
+
+    //using prototype add properties and methods
+    personProtoType.prototype.name="No Name";
+    personProtoType.prototype.age=0;
+    personProtoType.prototype.city="No City";
+
+    personProtoType.prototype.printPerson = function(){
+        document.write(this.name+", "+this.age+", "+this.city);
+    };
+
+    var person1 = new personProtoType();
+
+      //call object method
+    person1.printPerson();
+    document.write('<br>');
+
+    //reassign values again
+    person1.name="Venkatt";
+    person1.age=22;
+    person1.city="Hyd";
+
+    //call object method again
+    person1.printPerson();
+
+    document.write('<br>');
+    //check property is in object or not
+    document.write('age' in person1);
+    document.write('<br>');
+    //check property is in object or not
+    document.write(person1.hasOwnProperty('cityy'));
+
+</script>
+</html>

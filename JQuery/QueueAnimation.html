@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .myClass{
+            width:200px;
+            height: 200px;
+            background:green;
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Queue Animation</h2>
+<button>QueueAnimate</button><br><br>
+<div class="myClass">QueAnimate</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $(".myClass").animate({height:'150px',opacity:"0.6"},"slow");
+            $(".myClass").animate({width:'150px',opacity:"0.2"},"slow");
+            $(".myClass").animate({height:'250px',opacity:"0.8"},"slow");
+            $(".myClass").animate({width:'250px',opacity:"0.3"},"slow");
+        });
+    });
+</script>
+</html>

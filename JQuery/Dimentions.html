@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .myDiv{
+            width:300px;
+            height:200px;
+            background:green;
+            border:2px solid red;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Dimensention</h2>
+<button>Dimentions</button><br><br>
+<div class="myDiv">Div</div>
+<p id="myId"></p>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+         var text="";
+         text +="Width of Div:"+ $(".myDiv").width();+"<br>";
+         text +="Height of Div:"+ $(".myDiv").height()+"<br>";
+            text +="inner Width of Div:"+ $(".myDiv").innerWidth();+"<br>";
+            text +="inner Height of Div:"+ $(".myDiv").innerHeight()+"<br>";
+            text +="outter Width of Div:"+ $(".myDiv").outerWidth();+"<br>";
+            text +="outter Height of Div:"+ $(".myDiv").outerHeight()+"<br>";
+         $("#myId").html(text);
+        });
+    });
+</script>
+</html>

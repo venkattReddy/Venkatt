@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Promise</h2>
+</body>
+<script>
+    var roomClean = new Promise(function(ifUclean, ifUnotclean){
+        var isClean =true;
+
+        if(isClean){
+            ifUclean('Clean');
+        }else{
+            ifUnotclean('not Clean');
+        }
+    });
+
+    roomClean.then(function(fromSuccess){
+    console.log("Room is:"+ fromSuccess);
+    },function(fromReject){
+        console.log("Room is:"+ fromReject);
+    });
+
+    var removeGarbage = new Promise(function(remove, notRemove){
+     var isRemove = true;
+     if(isRemove){
+         remove('Remove Garbage');
+     }else{
+         notRemove("Not Remove Garbage");
+     }
+    });
+
+    removeGarbage.then(function(fromSuccess){
+      console.log("Garbage is:" +fromSuccess);
+    },function(fromFaile){
+        console.log("Garbage is:" +fromFaile);
+    });
+
+    var getIceCream =new Promise(function(iceCreame,  notIceCreame){
+      var isGetCream =true;
+
+      if(isGetCream){
+          iceCreame("Get Ice Cream");
+      }else{
+          notIceCreame("Not Get Ice Cream");
+      }
+    });
+
+    getIceCream.then(function(fromSuccess){
+      console.log("Ice Cream:"+ fromSuccess);
+    },function(fromReject){
+        console.log("Ice Cream:"+ fromReject);
+    });
+
+
+</script>
+</html>

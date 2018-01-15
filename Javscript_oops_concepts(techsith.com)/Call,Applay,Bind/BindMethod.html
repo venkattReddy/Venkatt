@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Bind Method</h2>
+</body>
+<script>
+    var myObj ={num:2};
+
+    var myFunction = function(a, b, c){
+     return this.num + a + b +c;
+      };
+    var myArray=[4,5,6];
+    var result = myFunction.bind(myObj);
+    console.log(result(null,[4,5,6]);
+</script>
+</html>

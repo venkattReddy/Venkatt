@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red">Call Method</h2>
+</body>
+<script>
+    //here one obejct
+    var myFirst ={
+                    "fname":"Jhon",
+                    "lname":"Doe",
+                    "fullName": function(){
+                   return this.fname+" "+this.lname;
+                  }
+    };
+
+    //here create another obejt
+    var mySecound = {
+        "fname":"Venkatt",
+        "lname":"Reddy"
+    };
+
+    //call first object method(fullname()) into secound object
+
+    var result = myFirst.fullName.call(mySecound);
+    console.log(result);
+</script>
+</html>

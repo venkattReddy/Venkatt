@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">WebWorkers()</h2>
+<div style="width:800px;background:green;padding:30px">Javascript can runs one script file at oneces, can't run multiscripts at same time but using web workers we can run multi script files at sime time calls mutithreding.using postMessage() they can send messages each other and using onMessage() they can receive messages.
+</div>
+
+</body>
+<script type="text/javascript">
+// if conditin checks web worker is available or not in this browser if available first thing is crate web worker
+if(window.Worker){
+var myWorker = new Worker("worker.js"); //create web worker 'worker.js' is webworker code separatly
+
+var message = {"addThis":{num1:6, num2:2} };
+
+myWorker.postMessage(message); //Here post meathod post object to worker onmessage().
+//Here recieve from worker 
+myWorker.onmessage = function(e){
+ console.log(e.data.result);
+};
+
+}
+</script>
+</html>

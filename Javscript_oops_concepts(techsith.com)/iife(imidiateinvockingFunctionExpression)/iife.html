@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Imediate Invocking Function Expression</h2>
+</body>
+<script type="text/javascript">
+function increment1(i){
+ return i + 6;
+}
+console.log(increment1(4));
+
+var increment2 = function(i){
+    return i + 4;
+}
+console.log(increment2(4));
+
+//this is iife function(self invocking function)
+(function(i){
+	console.log(i + 8); 
+}(7));
+
+(function(i){
+	console.log(i + 8); 
+}(4));
+</script>
+</html>

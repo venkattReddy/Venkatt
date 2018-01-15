@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 style="color:red;">Jquery Get Value</h2>
+<input type="text" id="myValue" placeholder="Enter Text">
+<button>ClickMe</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            alert("Value is:"+ $("#myValue").val());
+        });
+    });
+</script>
+</html>

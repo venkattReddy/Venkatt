@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Appaly Method(In this Method take the input as array)</h2>
+</body>
+<script>
+    var myObj={num:2}; //one object creted
+
+    var addToThis =function(a, b){
+     return this.num + a + b ;
+    };
+    var myArray=[1,2];
+    var result1 = addToThis.apply(myObj,myArray);
+    console.log(result1);
+
+    var result2 = addToThis.apply(myObj,[5,2]);
+    console.log(result2);
+
+</script>
+</html>

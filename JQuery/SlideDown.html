@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .flip{
+            width: 500px;
+            padding:10px;
+            border:2px solid blue;
+            background:green;
+            text-align: center;
+        }
+        .panel{
+            width: 500px;
+            padding:10px;
+            height: 150px;
+            background: yellow;
+            border:2px solid red;
+            text-align:center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red">Slide Down</h2>
+<div class="flip">Flip</div>
+<div class="panel">Panel</div>
+</body>
+<script>
+    $(document).ready(function(){
+      $(".flip").click(function(){
+          $(".panel").slideDown("slow");
+      });
+    });
+</script>
+</html>

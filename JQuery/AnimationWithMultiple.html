@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+      .myAnimate{
+          width:50px;
+          height:50px;
+          background:green;
+          position: absolute;
+          text-align:center;
+      }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Animation With Multiple Properties</h2>
+<button>Animate</button><br><br>
+<div class="myAnimate">Div</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+         $(".myAnimate").animate({left:'200px',opacity:'0.6',width:'150px',height:'150px'});
+        });
+    });
+</script>
+</html>

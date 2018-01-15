@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+       #myAnimat{
+           width:200px;
+           height: 100px;
+           background: green;
+           border:2px solid blue;
+           text-align:center;
+           position:absolute;
+       }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Jquery Animation</h2>
+<button>ClickMe</button><br><br>
+<div id="myAnimat">Hello</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#myAnimat").animate({left:'200px'});
+        });
+
+    });
+</script>
+</html>

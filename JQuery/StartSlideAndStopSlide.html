@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+       #flip,#panel{
+           padding:10px;
+           background: green;
+           border: 2px solid blue;
+       }
+        #panel{
+            display:none;
+            height: 550px;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Start Slide And Stop Slide</h2>
+<button id="start">Start</button>&nbsp;&nbsp;<button id="stop">Stop</button><br><br>
+<div id="flip">Flip</div>
+<div id="panel">Panel</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#start").click(function(){
+         $("#panel").slideDown(2000);
+        });
+
+        $("#stop").click(function(){
+            $("#panel").stop();
+        });
+    });
+</script>
+</html>

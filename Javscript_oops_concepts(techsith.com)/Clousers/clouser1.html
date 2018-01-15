@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Clouser(A function with preserve Data Calls Clousers we can make global variable as local variable) Example</h2>
+</body>
+<script>
+    var outter = 6;
+    var addTo = function(){
+    var inner = 4;
+    return outter + inner;
+    };
+
+    var reuslt = addTo();
+    console.log(reuslt);
+</script>
+</html>

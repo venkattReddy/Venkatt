@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Constructor</h2>
+</body>
+<script>
+    function person(fname,lname,age,city){
+    this.fname=fname;
+    this.lname=lname;
+    this.age=age;
+    this.city=city;
+    this.fullGetData=function(){
+        return this.fname+" "+this.lname+" "+ this.age;
+    };
+    }
+    var myFather=new person("Jhon","Doe",56,"India");
+    var myMother=new person("Rosy","Doe",54,"India");
+    //Normal Properties
+    document.write("<h2>Normal Constructor</h2>");
+    document.write("Father name:"+myFather.fname+"<br>"+"Mother name:"+myMother.fname+"<br><br>");
+     //Here normal Method
+    document.write("<h2>Normal Method</h2>");
+    document.write(myFather.fullGetData());
+
+    document.write("<h2>Here add property to object only not Constructor function(That's why Mother not get property)</h2>");
+    //Here we can add property for object not construct funtion
+    myFather.nationality="Britan";
+    document.write("Father Nationality:"+myFather.nationality+"<br>"+"Mother Nationality:"+myMother.nationality+"<br><br>");
+
+    document.write("<h2>Here Add property to Constructor function using prototype(That's why Mother get property)</h2>");
+    //Here add property using prototype to constructor function
+    person.prototype.lang="English";
+    document.write("Father Nationality:"+myFather.lang+"<br>"+"Mother Nationality:"+myMother.lang+"<br><br>");
+
+    document.write("<h2>Here Add Method to object only not constructor(That's why Mother not get Method)</h2>");
+    //Here Add Method to Object
+    myFather.FullName=function(){
+       return this.fname+" "+this.lname;
+    };
+    document.write("Father FullName:"+myFather.FullName()+"<br><br><br>");
+
+    document.write("<h2>Here Add Method to constructor using prototype (That's why Mother  get Method)</h2>");
+    //Here Add Method to constructor using proptotype
+    person.prototype.fullData=function(){
+        return this.fname+" "+this.lname+" "+this.age;
+    }
+    document.write("Father FullData:"+myFather.fullData()+"<br>"+"Mother Full Data:"+myMother.fullData()+"<br><br>");
+    //Here we can add property with constructor function
+
+</script>
+</html>

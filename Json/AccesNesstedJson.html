@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Accessing Nesting Json</h2>
+</body>
+<script>
+    var myObj = {
+        "name":"John",
+        "age":30,
+        "cars": {
+            "car1":"Ford",
+            "car2":"BMW",
+            "car3":"Fiat"
+        }
+    }
+
+
+   for(var x in myObj){
+       document.write("result is:"+myObj[x]+"<br>");
+       for(y in myObj.cars){
+};
+
+       document.write("result is:"+myObj.cars[y]+"<br>");
+
+   };
+
+</script>
+</html>

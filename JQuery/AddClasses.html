@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+       .myClass{
+           color:red;
+       }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Add Classes to Element</h2>
+<button id="button1">AddClass</button>&nbsp;&nbsp;<button id="button2">RemoveClass</button>&nbsp;&nbsp;<button id="button3">ToggleClass</button>
+<h2>Heading</h2>
+<p>Paragraph</p>
+</body>
+<script>
+    $(document).ready(function(){
+     $("#button1").click(function(){
+         $("h2,p").addClass("myClass");
+     });
+        $("#button2").click(function(){
+            $("h2,p").removeClass("myClass");
+        });
+
+        $("#button3").click(function(){
+            $("h2,p").toggleClass("myClass");
+        });
+    });
+</script>
+</html>

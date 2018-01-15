@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 style="color:red;">Call Back Function</h2>
+<button>Clicke</button>
+<p>Hi Hello</p>
+</body>
+<script>
+    $(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide("slow",function(){
+            alert("Hide compleated");
+        });
+    });
+    });
+</script>
+</html>

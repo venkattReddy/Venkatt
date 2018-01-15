@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myClass{
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+<body>
+<h2>Event Bubbling Boottm to Top Approch</h2>
+1. HTML → BODY → FORM → DIV → P (capturing phase, the first listener), and then:
+
+<form onclick="alert('form')" class="myClass">FORM
+    <div onclick="alert('div')" class="myClass">DIV
+        <p onclick="alert('p')" class="myClass">P</p>
+    </div>
+</form>
+
+2. P → DIV → FORM → BODY → HTML (bubbling phase, the second listener).
+</body>
+</html>

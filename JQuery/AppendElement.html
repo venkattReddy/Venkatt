@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 style="color:red;">Append Element</h2>
+<button id="btn1">Append</button>
+<h2>Append Content End of "p"</h2>
+<p>Bananna</p>
+<p>Orange</p>
+<p>Strawberry</p>
+<button id="btn2">Appeldlist</button>
+<ol>
+    <li>Venkatt</li>
+    <li>Kalyan</li>
+    <li>Kumar</li>
+</ol>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+         $("p").append("<b>Apple</b>");
+        });
+        $("#btn2").click(function(){
+            $("ol").append("<li>Sangeetha</li>");
+        });
+    });
+</script>
+</html>

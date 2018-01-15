@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Prototype Chaining(Here x created from the function,function created from the object this method calls prototype chining)</h2>
+</body>
+<script>
+    var x = function(j){
+        this.i=0; //default value
+        this.j = j;
+    };
+
+    x.prototype.getj=function(){
+        return this.j;
+    }
+
+    console.dir(x);
+
+    var x1 = new x(1);
+    var x2 = new x(2);
+    console.log(x1.getj());
+    console.log(x2.getj());
+</script>
+</html>

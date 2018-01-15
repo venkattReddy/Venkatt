@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      #flip,#panel{
+          width: 500px;
+          padding:5px;
+          background:green;
+          border:2px solid blue;
+          text-align: center;
+      }
+      #panel{
+          height:100px;
+      }
+    </style>
+</head>
+<body>
+<h2>Slide Up</h2>
+<div id="flip">flip</div>
+<div id="panel">panel</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+        $("#panel").slideUp("slow");
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #flip,#panel{
+            padding:5px;
+            background:green;
+            border: 2px solid red;
+            text-align: center;
+        }
+        #panel{
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Slide Toggle</h2>
+<div id="flip">Flip</div>
+<div id="panel">Panel</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Constant</h2>
+</body>
+<script>
+  window.onload = function(){
+
+       function calArea(r){
+           const pi = 10;
+  console.log("Area is:"+ pi * r * r);
+        }
+        calArea(5);
+    };
+
+
+  let myfunction = function(){
+
+      function calArea(r){
+          const pi = 10;
+          console.log("Area is:"+ pi * r * r);
+      }
+      calArea(5);
+  };
+  myfunction();
+
+</script>
+</html>

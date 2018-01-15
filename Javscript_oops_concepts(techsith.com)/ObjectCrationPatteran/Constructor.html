@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Constructor Pattern</h2>
+</body>
+<script>
+    var peopleConstrutor = function(name,age,city){
+      this.name = name;
+      this.age = age;
+      this.city = city;
+      this.printPerson = function(){
+          document.write(this.name+" "+this.age+" "+this.city+"<br>");
+      };
+    };
+
+    var person1 = new peopleConstrutor("Venkatt",26,"BNG");
+    var person2 = new peopleConstrutor("Reddy",36,"DHL");
+    person1.printPerson();
+    person2.printPerson();
+</script>
+</html>

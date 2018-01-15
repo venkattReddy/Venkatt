@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">New String Methods</h2>
+<h4 style="color:red;">New String Method</h4>
+<p>repeat</p>
+<p>startWith</p>
+<p>endsWith</p>
+<p>includs</p>
+</body>
+<script>
+    window.onload = function(){
+        let string = "goodbye";
+        console.log(string.repeat(50));
+        console.log(string.startsWith("good"));
+        console.log(string.startsWith("bye"));
+        console.log(string.startsWith("bye", 4));
+        console.log(string.startsWith("bye", string.length-3));
+
+        let str ="my Name is Venkatt"
+        console.log(str.includes("Name"));
+        console.log(str.includes("Names"));
+
+        let youSay = "GoodBye";
+        if(youSay.startsWith("Good")){
+          let iSay ="Hello";
+        }
+        console.log('if u say ${youSay}, i say ${iSay}');
+    };
+</script>
+</html>

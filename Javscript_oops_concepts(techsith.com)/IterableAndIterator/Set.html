@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Set</h2>
+</body>
+<script>
+
+    //using 'of' we cn print only values
+    let myArray= new Set([1,2,2,2,3,3]);    //set() doen't print duplicate values
+   console.dir(myArray);
+    for(let val of myArray){
+   console.log(val);
+    };
+
+
+    //using 'in' we can print only propery names
+    let myObject = {
+        "name":"Venkatt",
+        "age":25,
+        "friends":["jhon","charles","mike"],
+        "GetName":function(){
+            return this.name;
+        }
+    };
+    for(let key in  myObject){
+   console.log(key);
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 style="color:red;">Chaining Method</h2>
+<button>Click</button>
+<p>Hello</p>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+           $("p").css("color","red").slideUp(2000).slideDown(2000);
+        });
+    });
+</script>
+</html>

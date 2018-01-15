@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Using Call Back funtion Sort Array Object</h2>
+</body>
+<script>
+   var myArray = [{"num":1,"str":"Aplle"},{"num":3,"str":"Orange"},{"num":2,"str":"Bannana"},{"num":4,"str":"StrawBerry"}];
+   myArray.sort(function(a, b){
+    if(a.str < b.str){
+     return false;
+    }else{
+    return true;
+    }
+   });
+   console.log(myArray);
+</script>
+</html>

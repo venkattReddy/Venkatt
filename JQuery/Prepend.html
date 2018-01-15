@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>Prepend</h2>
+<button id="btn1">Button</button>
+<p>Orange</p>
+<p>PineAplle</p>
+<p>Bananna</p>
+<button id="btn2">Clikme</button>
+<ol>
+    <li>Kalyan</li>
+    <li>Kumar</li>
+</ol>
+
+</body>
+<script>
+    $(document).ready(function(){
+     $("#btn1").click(function(){
+     $("p").prepend("<b>Apple</b>");
+     });
+
+        $("#btn2").click(function(){
+            $("ol").prepend("<li>Venkatt</li>");
+        });
+    });
+</script>
+</html>

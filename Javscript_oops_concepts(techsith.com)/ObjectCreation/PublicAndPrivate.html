@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Public And Privare</h2>
+</body>
+<script>
+    //* this.name= means 'this' indicate the publica varaible, var name = 'var' indicate the private variable
+
+    var PrivatePublic =function(){
+        var privateObj = "Jhon";
+        this.name = "reddy";
+        //this function gives undefine as output
+        this.myFunction1 = function(){
+            return this.privateObj;
+        };
+        //this functions gives name value
+        this.myFunction2 = function(){
+            return this.name;
+        };
+        //this function returns privateObj value without this key word B'cause 'var' is private key word
+        this.myFunction3 = function(){
+            return privateObj;
+        };
+
+        //define private method
+        var privateMethod =function(){
+            return privateObj;
+        };
+    };
+ var p1 = new PrivatePublic();
+    console.dir(p1.myFunction1());
+    console.dir(p1.myFunction2());
+    console.dir(p1.myFunction3());
+    console.dir(p1.privateMethod());
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Function Chaining</h2>
+</body>
+<script type="text/javascript">
+"use strict";
+var myFunction = function(){
+	this.i = 0;
+	this.add =function(i){
+		  this.i += i;
+        return this;
+	};
+	this.sub = function(i){
+		  this.i -= i;
+         return this;
+	};
+	this.getMessage = function(){
+		console.log(this.i);
+	};
+};
+
+var fun = new myFunction();
+fun.add(5).sub(9).getMessage();
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .myClass{
+            width:150px;
+            height:150px;
+            background:green;
+            position:relative;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Animation With Letters</h2>
+<button>ClickMe</button><br><br>
+<div class="myClass">Hello</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+        $(".myClass").animate({left:'250px'},"slow");
+            $(".myClass").animate({fontSize:'36px'},"slow");
+        });
+    });
+</script>
+</html>

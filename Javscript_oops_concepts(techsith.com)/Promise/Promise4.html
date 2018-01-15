@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Promise Define As Function</h2>
+</body>
+<script>
+    var cleanRoom = function(){
+       return new Promise(function(resolve, reject){
+         resolve("Room is Cleaned");
+       });
+    };
+
+    var removeGarbage = function(){
+        return new Promise(function(resolve, reject){
+            resolve("Gerbage Removed");
+        });
+    };
+
+    var getIcream = function(){
+        return new Promise(function(resolve,reject){
+            resolve("GetIceCream");
+        });
+    };
+
+    Promise.race([cleanRoom(),removeGarbage(),getIcream()]).then(function(){
+        console.log("one Success fully Executed");
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .myClass{
+          height: 100px;
+          width:200px;
+          background:green;
+          border: 2px solid blue;
+          position: absolute;
+      }
+    </style>
+</head>
+<body>
+<h2 style="color:red;">Animate Toggle</h2>
+<button>AnimateToggle</button><br><br>
+<div class="myClass">Toggle Animate</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+         $(".myClass").animate({height:'toggle'});
+        });
+    });
+</script>
+</html>

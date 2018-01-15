@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Arrow Fnctions</h2>
+</body>
+<script>
+    window.onload = function(){
+      let myfunction = () => console.log("myFunction rendering....");
+        myfunction();
+
+        let myGreeting = (name) =>console.log('${name} says Hello');
+        myGreeting("Venkatt");
+
+        let ninja = {
+            name:"Reddy",
+            chop(x){
+                window.setInterval(function(){
+                    console.log(this.name+"Count Increament");
+                }, 1000)
+            }
+        };
+        ninja.chop(4);
+
+
+    };
+
+
+</script>
+</html>

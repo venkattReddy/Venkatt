@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Promise</h2>
+</body>
+<script>
+    var promiseToCleanRoom = new Promise(function(resolve, reject){
+
+      // room cleaning is the task
+
+        var isClean =true;
+        if(isClean){
+            resolve('clean');
+        }else{
+            reject('not clean');
+        }
+    });
+
+    promiseToCleanRoom.then(function(fromSuccess){
+        console.log("the room is :"+ fromSuccess);
+    },function(fromFaile){
+        console.log("the room is :"+ fromFaile);
+    });
+</script>
+</html>

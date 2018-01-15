@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color:red;">Call(using call methos we can call other object properties and methods into our object and pass the values as separate)</h2>
+</body>
+<script>
+    var myObj ={"num":5}; //thi is object
+
+     var addToThis = function(a, b, c){      //this is metod
+         return a + b + c;
+     };
+
+    // call the object into method
+   var result = addToThis.call(myObj,4,5,1);
+   console.log(result);
+</script>
+</html>

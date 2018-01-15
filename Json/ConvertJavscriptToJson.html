@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+<h2 style="color:red;">Convert Javascript to Json</h2>
+</body>
+<script>
+    var myObj = { "name":"John", "age":30, "city":"New York"};
+     document.write("<h2>Source Javascript Object</h2>");
+     document.write(myObj);
+    //conver object to string
+    var myJson=JSON.stringify(myObj);
+    document.write("<h2>Convert Normal Object to Json String</h2>");
+    document.write(myJson+"<br>");
+    document.write(angular.isString(myJson)+"<br>");
+
+    //conver string to object
+    document.write("<h2>Conver Json String to Javascript Object</h2>");
+    var myObject = JSON.parse(myJson);
+    document.write(myObject+"<br>");
+    document.write(angular.isObject(myObject));
+</script>
+</html>
